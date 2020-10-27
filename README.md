@@ -28,10 +28,11 @@ SELECT OrderID,ShipCity FROM Orders where ShipCity='Rio de Janeiro' or ShipCity=
 ## 4. Select all of the entries where the Company name has a z or a Z in the table of Customers.
 * **Query**
 ```sql
-SELECT * FROM Customers WHERE CompanyName LIKE 'Z%' or CompanyName LIKE '%z'
+SELECT * FROM Customers WHERE CompanyName LIKE '%Z%' or CompanyName LIKE '%z%'
 ```
 * **Response**    
-**There are zero instances of 'z' or 'Z' appearing in the company name.**
+**6 instances where z appears in a company name**
+![q4]()
 
 ## 5. Find me the Name of All of the companies that do not have FAX numbers! I would also like to know with whom I need to speak with, their contact numbers and what city they are based in.
 * **Query**
