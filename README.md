@@ -31,7 +31,7 @@ SELECT OrderID,ShipCity FROM Orders where ShipCity='Rio de Janeiro' or ShipCity=
 SELECT * FROM Customers WHERE CompanyName LIKE 'Z%' or CompanyName LIKE '%z'
 ```
 * **Response**    
-**There are zero instances of 'z' or 'Z' appearing in the company name. **
+**There are zero instances of 'z' or 'Z' appearing in the company name.**
 
 ## 5. Find me the Name of All of the companies that do not have FAX numbers! I would also like to know with whom I need to speak with, their contact numbers and what city they are based in.
 * **Query**
