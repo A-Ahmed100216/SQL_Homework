@@ -56,4 +56,5 @@ SELECT *  FROM Customers WHERE City='Paris'
 SELECT TOP 5 * FROM [Order Details] ORDER BY Quantity DESC
 ```
 * **Response**
-![q7]()
+![q7](https://github.com/A-Ahmed100216/SQL_Homework/blob/main/Images/q7.png)
+
