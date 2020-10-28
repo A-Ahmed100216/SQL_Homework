@@ -60,13 +60,16 @@ JOIN Customers ON Orders.CustomerID=Customers.CustomerID
 WHERE Customers.City='Paris' ORDER BY [Order Details].Quantity DESC
 ```   
 * **Response**    
-![q7](https://github.com/A-Ahmed100216/SQL_Homework/blob/main/Images/q7.png)
-
+![q7](https://github.com/A-Ahmed100216/SQL_Homework/blob/main/Images/queston7.png)
 ## 8. I need to know more about these these Paris client. Can you find out which ones their deliveries took longer than 10 days? Display the Business/client name, contact name, all their contact details (don't forget the fax!), as well as the number of deliveries that where overdue! Just add a column named: 'Number overdue orders'
 * **Query**
 ```sql
-
-```
+SELECT Customers.CompanyName, Customers.ContactName, Customers.Address ,Customers.Phone, Customers.Fax, 
+    DATEDIFF(d,Orders.OrderDate,Orders.ShippedDate)-10 'Num of overdue'
+FROM Customers
+JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+WHERE DATEDIFF(d,OrderDate,ShippedDate)>10 AND Orders.ShipCity='Paris'
+```   
 * **Response**   
 ![q8]()
 
