@@ -58,3 +58,12 @@ SELECT TOP 5 * FROM [Order Details] ORDER BY Quantity DESC
 * **Response**
 ![q7](https://github.com/A-Ahmed100216/SQL_Homework/blob/main/Images/q7.png)
 
+## 8. I need to know more about these these Paris client. Can you find out which ones their deliveries took longer than 10 days? Display the Business/client name, contact name, all their contact details (don't forget the fax!), as well as the number of deliveries that where overdue! Just add a column named: 'Number overdue orders'
+* **Query**
+```sql
+
+```
+* **Response**
+![q8]()
+
+
