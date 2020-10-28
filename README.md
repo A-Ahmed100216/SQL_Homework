@@ -53,9 +53,13 @@ SELECT *  FROM Customers WHERE City='Paris'
 ## 7. WAIT! Where are you going? (...) These clients are hard to sell too! We need more intel.. Can you find out, from these clients from Paris, whom orders the most by quantity? Who are our top 5 clients?
 * **Query**
 ```sql
-SELECT TOP 5 * FROM [Order Details] ORDER BY Quantity DESC
-```
-* **Response**
+SELECT TOP 5 Orders.OrderID, [Order Details].Quantity, Customers.ContactName,Customers.CustomerID, Customers.City
+FROM [Order Details]
+JOIN Orders ON [Order Details].OrderID= Orders.OrderID
+JOIN Customers ON Orders.CustomerID=Customers.CustomerID
+WHERE Customers.City='Paris' ORDER BY [Order Details].Quantity DESC
+```   
+* **Response**    
 ![q7](https://github.com/A-Ahmed100216/SQL_Homework/blob/main/Images/q7.png)
 
 ## 8. I need to know more about these these Paris client. Can you find out which ones their deliveries took longer than 10 days? Display the Business/client name, contact name, all their contact details (don't forget the fax!), as well as the number of deliveries that where overdue! Just add a column named: 'Number overdue orders'
@@ -63,7 +67,7 @@ SELECT TOP 5 * FROM [Order Details] ORDER BY Quantity DESC
 ```sql
 
 ```
-* **Response**
+* **Response**   
 ![q8]()
 
 
