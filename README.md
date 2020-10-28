@@ -49,3 +49,11 @@ SELECT *  FROM Customers WHERE City='Paris'
 ```
 * **Response** 
 ![q6](https://github.com/A-Ahmed100216/SQL_Homework/blob/main/Images/q6.png)
+
+## 7. WAIT! Where are you going? (...) These clients are hard to sell too! We need more intel.. Can you find out, from these clients from Paris, whom orders the most by quantity? Who are our top 5 clients?
+* **Query**
+```sql
+SELECT TOP 5 * FROM [Order Details] ORDER BY Quantity DESC
+```
+* **Response**
+![q7]()
